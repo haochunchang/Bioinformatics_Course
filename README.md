@@ -29,5 +29,3 @@ Introduction to Bioinformatics
 ### RNA-sequencing & Gene Expression
 
 ### Network Biology
-
-### Proteomics & Protein Structure
