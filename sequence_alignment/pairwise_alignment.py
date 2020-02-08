@@ -1,16 +1,17 @@
 import numpy as np
-from itertools import product
+from typing import Tuple
 
 GAP_CHAR = '_'
 
-def global_alignment(dataset: str, match_score=1, gap_score=-1, mismatch_score=-1) -> list:
+def pairwise_alignment(dataset: str, 
+                       match_score=1, 
+                       gap_score=-1, 
+                       mismatch_score=-1) -> Tuple[str, int]:
     """
-    Needleman–Wunsch algorithm for dataset: "stringA"\n"stringB"\n
+    Needleman–Wunsch algorithm for dataset: "stringA\nstringB\n"
 
-    Assume scoring matrix is:
-        match = 1, mismatch = -1, gap("_") = -1
-
-    Returns a optimal alignment and its matching score.
+    Returns:
+        (an optimal alignment, its matching score)
     """
     a, b = dataset.splitlines()
     nrow = len(b) + 1
@@ -46,7 +47,7 @@ def global_alignment(dataset: str, match_score=1, gap_score=-1, mismatch_score=-
             for s in sources:
                 path[i][j].append(s)
     
-    # Traceback multiple paths: construct graph, DFS
+    # Traceback paths
     cur_row = len(b)
     cur_col = len(a)
     path1, path2 = "", ""
@@ -55,6 +56,8 @@ def global_alignment(dataset: str, match_score=1, gap_score=-1, mismatch_score=-
     while cur_row > 0 and cur_col > 0:
         
         direction = path[cur_row][cur_col]
+        
+        # select one source arbitrarily
         d = direction[0]
         
         #print("row: {}, col: {}, d: {}".format(cur_row, cur_col, d))
@@ -63,8 +66,10 @@ def global_alignment(dataset: str, match_score=1, gap_score=-1, mismatch_score=-
             cur_col -= 1
             path1 = a[cur_col] + path1
             path2 = b[cur_row] + path2
-            if path1[0] == path2[0]: score += match_score
-            else: score += mismatch_score 
+            if path1[0] == path2[0]: 
+                score += match_score
+            else: 
+                score += mismatch_score 
         elif d == 'u': 
             cur_row -= 1
             path1 = GAP_CHAR + path1
@@ -98,5 +103,5 @@ def calculate_score(dataset: str, match_score=1, gap_score=-1, mismatch_score=-1
 if __name__ == "__main__":
     #data = 'ATCGA\nATCG\n'
     data = "GCATGCU\nGATTACA\n"
-    result, score = global_alignment(data)
+    result, score = pairwise_alignment(data)
     print(result, score)

@@ -1,14 +1,14 @@
 import unittest
 
-from global_alignment import global_alignment
+from pairwise_alignment import pairwise_alignment
 
 class TestAlignment(unittest.TestCase):
 
-    def test_global_alignment(self):
+    def test_pairwise_alignment(self):
         a = "GCATGCU"
         b = "GATTACA"
         data = '{}\n{}\n'.format(a, b)
-        results, score = global_alignment(data)
+        results, score = pairwise_alignment(data)
         ans = 0
 
         self.assertEqual(score, ans)
