@@ -3,14 +3,16 @@ import unittest
 import solution_04_data_structure as ds
 
 class TestDS(unittest.TestCase):
- 
+    """
+    Testing functions for 04_datastructure
+    """
     def test_find_ori(self):
-        dna = 'GATGGTACTTGACTACGTAAATT'
+        dna = 'AATGGTACTTGACTACGTAAATT'
         dna = [n for n in dna]
-        ori = 'GGT'
+        ori = 'TTA'
 
         result = ds.find_ori(dna, ori)
-        ans = 3
+        ans = 21
         self.assertEqual(result, ans)
 
     def test_is_on_the_sameline(self):

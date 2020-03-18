@@ -13,7 +13,7 @@ class TestProcess(unittest.TestCase):
 
     def test_count_nucleotides(self):
         dna = 'AGCTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
-        ans = 20, 12, 17, 20
+        ans = "20 12 17 20"
         
         result = rna.count_nucleotides(dna)
         self.assertEqual(result, ans)
