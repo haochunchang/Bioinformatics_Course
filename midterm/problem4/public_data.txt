@@ -1,0 +1,4 @@
+tom	Tom,(=^.^=) meow!,My name is Tom, I am a cat.
+toby	Toby,(=^.^=) meow!,My name is Toby, I am a cat.
+garfield	Garfield,(=^.^=) meow!,My name is Garfield, I am a cat.
+hakuna matata	Hakuna matata,(=^.^=) meow!,My name is Hakuna matata, I am a cat.

@@ -1,3 +1,16 @@
+"""
+Problem 3: Pairwise sequence alignment (40%)
+Description:
+    Write a function that can return any optimal alignment from Needleman–Wunsch algorithm.
+
+Input:
+    seq1: string, DNA sequence (e.g. GCATGCU)
+    seq2: string, DNA sequence (e.g. GATTACA)
+
+Output:
+    Tuple: optimal alignment (string), optimal matching score (int)
+    (e.g. (GCAT_GCU,G_ATTACA, 0))
+"""
 from collections import OrderedDict
 from typing import Tuple
 

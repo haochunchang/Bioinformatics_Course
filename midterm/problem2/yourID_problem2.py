@@ -1,5 +1,16 @@
 """
-Problem 2
+Problem 2: Translating RNA into Protein (30%)
+Description:
+    Write a function that can translate RNA sequence into protein sequence.
+    Start from the first nucleotide. (Ignore start codon)
+    Stop translating when you encounter “Stop codon”.
+
+Input:
+    rna: string, RNA sequence (e.g. AUGUAA)
+
+Output:
+    A string of protein sequences translated from input
+    (e.g. M) Explanation: AUG -> M, UAA -> Stop
 """
 from os.path import join, dirname, realpath
 

@@ -1,5 +1,19 @@
 """
-Problem 1
+Problem 1: Find the origin of replication (30%)
+Description:
+    Write a function that can identify the origin of replication from a circular DNA.
+    Return the first origin’s starting and ending(excluding) index (start from 0).
+    If not found, return (-1, -1).
+
+Input:
+    dna: string, circular DNA in linear form (e.g. “ATCCGGATATACGTAG”)
+        Public: 160 < len(dna) < 1,000
+        Private: 16,000 < len(dna) < 100,000
+    ori: string, the origin of replication (e.g. “TATA”)
+        3 < len(ori) < 10
+
+Output:
+    Tuple: (start index, end index) (e.g. (7, 11))
 """
 
 
