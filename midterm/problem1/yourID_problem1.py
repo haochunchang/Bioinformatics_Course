@@ -30,8 +30,6 @@ if __name__ == "__main__":
 
     input_path, output_path = sys.argv[1], sys.argv[2]
 
-    test_dnas = []
-    test_ans = []
     with open(input_path, "r") as f, open(output_path, "w") as o:
         for i, line in enumerate(f):
             inputs, ans = line.split("\t")
@@ -40,6 +38,6 @@ if __name__ == "__main__":
 
             your_start, your_end = find_ori(dna, ori)
             your_ans = "{},{}".format(your_start, your_end)
-            # Uncomment the following line if you want to check your answers one by one.
+            # Uncomment the following line if you want to check your answers.
             # assert your_ans == ans, "Wrong answer at input#{}".format(i+1)
             o.write(your_ans + "\n")
