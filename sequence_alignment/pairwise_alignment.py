@@ -53,7 +53,7 @@ def pairwise_alignment(
     path1, path2 = "", ""
 
     score = 0
-    while cur_row > 0 and cur_col > 0:
+    while cur_row > 0 or cur_col > 0:
 
         direction = path[cur_row][cur_col]
 
