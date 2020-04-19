@@ -104,5 +104,5 @@ if __name__ == "__main__":
             aligned, your_score = pairwise_alignment(seq1, seq2)
             your_ans = "{}\t{}".format(aligned, your_score)
             # Uncomment the following line if you want to check your answers one by one.
-            # assert your_ans == ans, "Wrong answer at input#{}".format(i+1)
+            # assert your_score == int(ans), "Wrong answer at input#{}".format(i+1)
             o.write(your_ans + "\n")
