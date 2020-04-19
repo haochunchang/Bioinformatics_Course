@@ -65,5 +65,5 @@ if __name__ == "__main__":
         for i, (rna, ans) in enumerate(zip(test_rnas, test_ans)):
             your_ans = translate(rna)
             # Uncomment the following line if you want to check your answers.
-            # assert your_ans == ans, "Wrong answer at input#{}".format(i+1)
+            # assert (your_ans + "\n") == ans, "Wrong answer at input#{}".format(i+1)
             f.write(your_ans + "\n")

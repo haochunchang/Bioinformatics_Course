@@ -53,5 +53,5 @@ if __name__ == "__main__":
             your_start, your_end = find_ori(dna, ori)
             your_ans = "{},{}".format(your_start, your_end)
             # Uncomment the following line if you want to check your answers.
-            # assert your_ans == ans, "Wrong answer at input#{}".format(i+1)
+            # assert (your_ans + "\n") == ans, "Wrong answer at input#{}".format(i+1)
             o.write(your_ans + "\n")
